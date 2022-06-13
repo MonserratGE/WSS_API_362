@@ -1,0 +1,199 @@
+.conta-card{
+    font-family: 'Amatic SC', cursive;
+    font-family: 'Roboto', sans-serif;
+    padding: 50px;
+    display: block;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+  }
+  
+  .conta{
+    /* display: grid;
+    grid-template-columns: repeat(3,1fr); */
+    width: 940px;
+    /* gap: 15px; */
+    margin: auto;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .carde{
+    height: 300px;
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+    padding: 10px 30px;
+    border-radius: 2%;
+    border: 1px solid white;
+    transition: all .4s ease-in-out;
+    box-shadow: 0 1px 5px 0 black;
+    text-align: center;
+    background-color: #2C2B2E;
+    margin-bottom: 5vh;
+  }
+  
+  .carde:hover{
+    height: 590px;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px black;
+    margin-bottom: 5vh;
+  }
+  
+  .carde-img img{
+    position: left;
+    border-radius: 50%;
+    display: block;
+    height: 200px;
+    width: 200px;
+    align-items: left;
+    object-fit: cover;
+    margin: 20px auto;
+    transition: all .3s ease;
+  }
+  
+  .carde-img{
+    position: left;
+  }
+  
+  
+  .carde-img:after{
+    border-radius: 50%;
+    z-index: 20;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    right: 25px;
+  }
+  
+  .carde-img:before{
+    width: 60px;
+    height: 60px;
+    bottom: 12px;
+    left: -1px;
+    border-radius: 20px;
+    background-color: #47817E;
+    transform: rotate(120deg);
+  }
+  
+  .carde-icon{
+    display: flex;
+    position: absolute;
+    margin-top: 35px;
+    list-style: none;
+    left: 37vw;
+  }
+  
+  .carde-icon li{
+    border-radius: 50%;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    margin: 0 5px;
+    line-height: 40px;
+    text-align: center;
+    transform: scale(0);
+    transition: all 0.5s ease;
+  }
+
+  .dezplazar{
+    opacity: 0;
+    transition: all .5s ease;
+    transform: translateY(-45px);
+  }
+  
+  .agrandar{
+    transform: scale(0);
+    opacity: 0;
+    transition: all .4s ease;
+  }
+  
+  .carde:hover .agrandar{
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .carde:hover .dezplazar{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  
+  .carde-icon li a{
+    color: #240722;
+    height: 100%;
+    width: 100%;
+    border-radius: 20%;
+    background: #989697;
+    display: block;
+    line-height: 40px;
+    transition: all .3s;
+  }
+  
+  .carde-icon li a:hover{
+    transform: scale(1.1);
+    background-color: #47817E;
+  }
+  
+  .carde-icon li:nth-child(1){
+    transition-delay: .2s;
+  }
+  .carde-icon li:nth-child(2){
+    transition-delay: .3s;
+  }
+  .carde-icon li:nth-child(3){
+    transition-delay: .4s;
+  }
+  
+  .dezplazar:nth-child(1){
+    transition-delay: .1s;
+  }
+  .dezplazar:nth-child(2){
+    transition-delay: .2s;
+  }
+  .dezplazar:nth-child(3){
+    transition-delay: .3s;
+  }
+  
+  .infopersonal:nth-child(1){
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    line-height: 25px;
+  }
+  .infopersonal:nth-child(2){
+    margin: 15px 0;
+  }
+
+  .infopersonal:nth-child(3){
+    margin: 15px 0;
+  }
+  
+  .infopersonal{
+    color: white;
+  }
+  
+  .carde-acciones{
+    text-align: center;
+    margin-top: 25px;
+  }
+  
+  .botones:hover{
+    cursor: pointer;
+    width: 100%;
+  }
+  .botones span{
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+p {
+  padding-top: 1rem;
+}
+.row {
+  padding-top: 4rem;
+}
+
+hr{ 
+  border-top: 8px solid #47817E; 
+}

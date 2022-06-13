@@ -1,0 +1,69 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&family=Quicksand&family=Roboto:wght@300&display=swap');
+
+
+.item {
+    border: 2px solid rgba(201, 189, 177, 0.85);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .item-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+    /* text-transform: ; */
+    text-align: center;
+    font-weight: 10;
+  }
+  
+  .item-image {
+    border-radius: 5px;
+    height: 150px;
+    width: 100%;
+  }
+  
+  .item-details {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px 15px;
+  }
+  
+  .item-details > .item-price {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+  }
+  
+  /* ? SHOPPING CART */
+  .shopping-cart-items {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px 0px;
+  }
+  
+  .shopping-cart-header {
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .shopping-cart-image {
+    
+    max-width: 80px;
+    border-radius: 5px;
+  }
+  
+  .shopping-cart-quantity-input {
+    font-family: 'Roboto', sans-serif;
+    max-width: 45px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #eee;
+    padding: 5px;
+  }
+  
+  .shopping-cart-total {
+    font-family: 'Roboto', sans-serif;
+    min-height: 96px;
+  }
+  
+  

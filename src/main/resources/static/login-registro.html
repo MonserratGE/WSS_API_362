@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Registro </title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- CSS Propio -->
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link  rel="icon" href="assets/img/logo_negativo.png"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
+    <!--Fontawesome Icons-->
+    <script src="https://kit.fontawesome.com/37b95c2af1.js" crossorigin="anonymous"></script>
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+</head>
+<body>
+    
+    <header class="container text-center mt-5 mb-lg-5">
+        <a href="WSS.html">
+          <img src="assets/img/logo.png" class="img-log" >  
+        </a>
+        <h2 class="text-dark">PROMEMEX</h2>
+    </header>
+    
+    <main class="contenedor__todo ">
+        
+        <div class="caja__trasera">
+            <div class="caja__trasera-login">
+                <h3>¿Ya tienes una cuenta?</h3>
+                <p>Inicia sesión para entrar en la página</p>
+                <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+            </div>
+            
+            <div class="caja__trasera-register">
+                <h3>¿Aún no tienes una cuenta?</h3>
+                <p>Regístrate para que puedas iniciar sesión</p>
+                <button id="btn__registrarse">Regístrarse</button>
+            </div>
+        </div>
+        
+        <!--Formulario de Login y registro-->
+        
+        <div class="contenedor__login-register ">
+            
+            <!--Login-->
+            <form action="" class="formulario__login">
+                <h2>Iniciar Sesión</h2>
+                <input type="text" placeholder="Correo Electronico">
+                <input type="password" placeholder="Contraseña">
+                <button>Entrar</button>
+            </form>
+            
+            <!--Register-->
+            <form action="" class="formulario__register">
+                <h2>Regístrarse</h2>
+                <input type="text" placeholder="Nombre completo">
+                <input type="text" placeholder="Correo Electronico">
+                <input type="password" placeholder="Contraseña">
+                <button>Regístrarse</button>
+            </form>
+        </div>
+    </main>
+
+      <footer class="footer-bg text-white mt-5 footer">
+        <div class="container">
+          <div class="row flex-lg-row-reverse">
+            
+            <div class="col-12 col-lg-4 mt-4 ">
+              <div class="d-flex flex-row justify-content-around">
+                <div class="p-2">
+                  <a href="https://www.facebook.com/Websamstuff-100440849349984"> 
+                    <button type="button" class="btn btn-outline-secondary border border-light">
+                      <i class="fab fa-facebook-f fa-2x text-light p-2"></i>
+                    </button>
+                  </a>
+                </div>
+                <div class="p-2">
+                  <a href="https://twitter.com/samwebstuff">
+                    <button type="button" class="btn btn-outline-secondary border border-light">
+                      <i class="fab fa-twitter fa-2x text-light p-2"></i>
+                    </button>
+                  </a>
+                </div>
+                <div class="p-2">
+                  <a href="https://www.linkedin.com/in/websamstuff-websamstuff-3b099523a/">
+                    <button type="button" class="btn btn-outline-secondary border border-light">
+                      <i class="fab fa-linkedin-in fa-2x text-light p-2"></i>
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <p class="text-center">Síguenos en redes</p>
+              
+            </div>
+
+            <div class="col-12 col-lg-4 mt-4">
+              <div class="d-flex flex-column align-items-center mt-4">
+                <p class="">
+                  <a href="politicas.html">Políticas de privacidad</a>
+                </p>
+                <p class="">
+                  <a href="terminos.html">Términos y condiciones</a>
+                </p>                
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-4 mt-4">
+              <div class="d-flex flex-column align-items-center">
+                <a class="align-top" href="WSS.html">
+                  <img  src="assets/img/logo-pie.png" width="200" height="auto">
+                </a>
+                <p>©️ Todos los derechos reservados.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

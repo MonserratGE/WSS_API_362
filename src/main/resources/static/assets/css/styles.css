@@ -1,0 +1,298 @@
+/*Fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Montserrat:wght@400;500&family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,400&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+
+}
+
+p, a, li, span, button {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cuadro > p {
+  font-weight: 100;
+}
+
+
+/* Navbar */
+.navbar-ground {
+  background-color: rgba(152, 150, 151, 255);
+}
+
+nav > .container > h2 {
+  color: #fff;
+}
+
+.nosotros > h2{
+  color: #fff;
+}
+.comprar {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0.5rem 0;
+}
+
+.container > h2 {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0.5rem 0;
+}
+
+.navbar-brand > img {
+  width: 60px;
+  height: auto;
+}
+
+.img-logo {
+  width: 315px;
+  height: 50px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Carrusel Menu */
+
+.img-carrusel {
+  height: calc(100vh - 76px);
+  object-fit: cover;
+  object-position: center;
+}
+
+.nosotros{
+  font-size: 20px ;
+}
+
+
+
+/* Cajita */
+.pantalla {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: calc(100vh - 76px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cuadro {
+  background-color: rgba(0, 0, 0, 0.712);
+  border-radius: 15px;
+  padding: 10px;
+  color: white;
+  width: 70vw;
+  height: auto;
+  
+}
+
+.fuente-nosotros{
+  text-align: justify;
+  font-size: 20px;
+}
+
+
+/* Información */
+
+.div-inicial .contenido-uno p {
+  margin: 5px 5px;
+}
+
+.contenido-uno > h1, h2 {
+  color: #000;
+  font-weight: 400;
+  margin: 0.5rem 0;
+
+}
+
+.div-inicial .contenido-dos p {
+  margin: 5px 5px;
+  list-style-type: upper-roman;
+  color: white;
+}
+.div-inicial .contenido-dos {
+  background-color: rgb(98, 68, 96);
+  padding: 20px 20px;
+}
+.div-inicial {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 100px;
+}
+.ubi {
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+  border-style: dashed;
+}
+
+/* Catálogo */
+
+.btn-catalogo {
+  padding: 10px;
+  width: 50%;
+  color: white;
+  animation: bgcolor ease-in-out 2s infinite;
+  border: none;
+}
+
+@keyframes bgcolor {
+  0% {
+    background-color: #624460;
+  }
+  50% {
+    background-color: #198e92;
+  }
+  100% {
+    background-color: #47817e;
+  }
+}
+
+/* Anuncio de cátalogo */
+.color-d{
+  background-color: #46817D
+}
+
+
+.imagen-anuncio{
+width: 100%;
+height: 100%;
+}
+
+/* Imágenes */
+.img-card {
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-bottom: 3px solid #343a4030;
+}
+
+.card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+.card-text {
+  font-family: 'Roboto Flex', sans-serif;
+  letter-spacing: .7px;
+  margin: 2rem 0;
+}
+
+.card {
+  border: 0;
+  border-bottom: 4px solid #343a4030;
+  border-right: 1.5px solid #343a4030;
+  border-radius: 3px;
+  transition: 300ms;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border: 0;
+  border-bottom: 4px solid #343a4090;
+  border-radius: 3px;
+}
+
+.card-body {
+  font-family: 'Roboto Flex', sans-serif;
+  font-weight: 100;
+  letter-spacing: 6%;
+}
+
+.bb-2 {
+  padding-bottom: 0.25rem;
+  border-bottom: 3px solid #343a4030;
+  align-items: center;
+}
+
+.fas {
+  color: #343a4095;
+}
+
+.go-shopping{
+  transition: ease-in-out 300ms ;
+}
+
+.go-shopping:hover {
+  color: #343a40;
+}
+/* Mapa */
+.maps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Vídeos */
+.videoIframe {
+  width: 100%;
+  height: 250px;
+}
+
+.video-bg {
+  background-color: #47817e;
+}
+
+.carro{
+  width: 100%;
+  height: 100%;
+}
+
+/* Formulario */
+.form-bg {
+  background-color: rgb(98, 68, 96);
+}
+
+/* Footer */
+.footer-bg {
+  background-color: rgba(152, 150, 151, 255);
+}
+
+.footer {
+  /*margin-top: 400px;*/
+  display: flex;
+  justify-content: space-around;
+  
+  font-size: 15px;
+  color: white;
+  line-height: 1;
+  flex-wrap: wrap;
+}
+.footer a {
+  color: white;
+  text-decoration: underline;
+}
+.footer span {
+  font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+  .pantalla {
+    display: none;
+  }
+}
+
+.gridContainer{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 20rem;
+}
+

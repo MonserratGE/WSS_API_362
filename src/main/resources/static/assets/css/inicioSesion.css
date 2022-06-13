@@ -1,0 +1,30 @@
+.logo{
+    height: auto;
+    width: 20rem;
+    margin-bottom: 3rem;
+    padding-right: 80;
+}
+input[type=text] {
+    border: none; 
+    transition: 300ms;
+}
+input[type=text]:focus{
+    border-bottom: 3px solid #47526C;
+    transition-timing-function: ease-in-out; 
+
+}
+
+h2{
+    text-align: justify;
+    width: 200px;
+   
+    
+    
+}
+
+p{
+    text-align: justify;
+    height: 25px;
+}
+
+

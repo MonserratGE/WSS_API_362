@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="icon" href="assets/img/logo_negativo.png"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
+    <!-- CSS Propio -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <!--Fontawesome Icons-->
+    <script src="https://kit.fontawesome.com/37b95c2af1.js" crossorigin="anonymous"></script>
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <title>Catálogo de Productos | WebSAMStuff</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-ground sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img class="img-logo" src="assets/img/logo.png" aling="text-left" />
+      </a>
+      <h2>PROMEMEX</h2>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <form class="ml-md-auto" id="searchForm">
+          <div class="input-group search">
+            <input id="searchInput" type="text" class="form-control" placeholder="Buscar" aria-label="busqueda" aria-describedby="basic-addon"/>
+            <div class="input-group-append">
+              <button class="btn btn-dark" id="basic-addon2" type="submit">
+                Buscar
+              </button>
+            </div>
+          </div>
+        </form>
+        <ul class="navbar-nav m-1">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              Inicio
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="catalog.html">Catálogo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#imagenes">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="carrito.html">Carrito</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login-registro.html">Iniciar Sesión</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    
+    <main class="container mt-5 mb-5">
+        <div class="anuncio row  m-0 h-m-50">
+            <div class="col-xl-7 color-d col-sm-12">
+                <h2 class="pt-4 pl-4">Nosotros sabemos que existen variedades de gustos, como diversidad de personas.</h2>
+                <p class="pb-4 pl-4">Por eso cada uno de nuestros modelos es diferente, estamos seguros que podras encontrar ese detalle tan original como tú.</p>
+            </div>
+            <div class="col-xl-5 pl-xl-3 col-sm-12 p-0">
+                    <img class="imagen-anuncio" src="https://media.admagazine.com/photos/61bbc0b21a71ed2e2a0fb580/16:9/w_2560%2Cc_limit/Crea-una-sala-con-ambiente-acogedor.jpg" alt="" srcset="">
+            </div>
+        </div>
+    </main>
+    <div class="container mt-5">    
+        <h2 class="mt-3">Nuestros productos</h2>
+        <div id="catalogContainer" class="row row-cols-1 row-cols-md-3 height-25">
+          
+        </div>
+    </div>
+    
+    <footer class="footer-bg text-white mt-5 footer">
+      <div class="container">
+        <div class="row flex-lg-row-reverse">
+          
+          <div class="col-12 col-lg-4 mt-4 ">
+            <div class="d-flex flex-row justify-content-around">
+              <div class="p-2">
+                <a href="https://www.facebook.com/Websamstuff-100440849349984"> 
+                  <button type="button" class="btn btn-outline-secondary border border-light">
+                    <i class="fab fa-facebook-f fa-2x text-light p-2"></i>
+                  </button>
+                </a>
+              </div>
+              <div class="p-2">
+                <a href="https://twitter.com/samwebstuff">
+                  <button type="button" class="btn btn-outline-secondary border border-light">
+                    <i class="fab fa-twitter fa-2x text-light p-2"></i>
+                  </button>
+                </a>
+              </div>
+              <div class="p-2">
+                <a href="https://www.linkedin.com/in/websamstuff-websamstuff-3b099523a/">
+                  <button type="button" class="btn btn-outline-secondary border border-light">
+                    <i class="fab fa-linkedin-in fa-2x text-light p-2"></i>
+                  </button>
+                </a>
+              </div>
+            </div>
+            <p class="text-center">Síguenos en redes</p>
+            
+          </div>
+
+          <div class="col-12 col-lg-4 mt-4">
+            <div class="d-flex flex-column align-items-center mt-4">
+              <p class="">
+                <a href="politicas.html">Políticas de privacidad</a>
+              </p>
+              <p class="">
+                <a href="terminos.html">Términos y condiciones</a>
+              </p>                
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-4 mt-4">
+            <div class="d-flex flex-column align-items-center">
+              <a class="align-top" href="WSS.html">
+                <img  src="assets/img/logo-pie.png" width="200" height="auto">
+              </a>
+              <p>©️ Todos los derechos reservados.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <!--Pruebas con API para imágenes-->
+    <script src="assets/js/catalog.js"></script>
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/buscador.js"></script>
+    <script src="assets/js/selectedProduct.js"></script>
+</body>
+</html>

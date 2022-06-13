@@ -1,0 +1,132 @@
+.pantalla{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: calc(100vh - 76px);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    vertical-align: top;
+    align-items: flex-start;
+}
+
+.logo{
+  width: 300px;  
+}
+
+
+.cuadro{
+  background-color: rgba(0, 0, 0, 0.387);
+  padding: 10px ;
+  color: white;
+  border-radius: 20px;
+  vertical-align: top;
+  border: 10px;
+  margin-top:4rem ;
+  font-size: 15px;
+  text-align: left;
+}
+
+h2{
+  font-size: 20px ;
+}
+
+.desc{
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: justify;
+}
+
+.img-fluid{
+  width: 400px;
+  height: 400px;
+}
+
+.images{
+  display: flex;
+  align-items: left;
+  height: 400px;
+  max-width: 100%;
+}
+
+.sam{
+  width: 300px;
+  padding: 30px;
+  display:flex;
+  align-items: center;
+}   
+
+.footer-bg {
+  background-color: rgba(152, 150, 151, 255);
+}
+
+.footer {
+  /*margin-top: 400px;*/
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  font-size: 15px;
+  color: white;
+  line-height: 1;
+  flex-wrap: wrap;
+}
+
+.footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer span {
+  font-weight: bold;
+}
+
+.footer p {
+  text-align: left;
+}
+
+.footer__right {
+  width: 400px;
+}
+
+.footer__left-social-icons {
+  font-size: 25px;
+}
+
+.footer__left-social-icons div {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.footer__left-social-icons div a {
+  display: inline-block;
+  border: 2px solid white;
+  padding: 5px 15px;
+  /*border-radius: 7px;*/
+  transition: all;
+  transition: .3s;
+}
+
+.footer__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.footer__left div {
+  display: flex;
+  align-items: center;
+}
+
+hr {
+  border: #47817E solid 1px;
+  border-radius: 2px;
+  height: 0px;
+}
+
+.img-card-team {
+  width: 100%;
+  height: auto;
+  border-radius: 1px;
+}
