@@ -11,41 +11,37 @@ public class DetalleCliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false, name = "id_detalle_cliente")
+    @Column(nullable = false, name="id_detalle_cliente")
     private Integer id;
 
-    @Column(nullable = false, name = "direccion")
+    @ManyToOne
+    @JoinColumn(nullable = false, name="cliente_id")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private Cliente cliente;
+
+    @Column(nullable = false, name="direccion")
     private String direccion;
 
-    @Column(nullable = false, name = "phone")
+    @Column(nullable = false, name="phone")
     private String phone;
 
-    @Column(nullable = false, name = "email")
+    @Column(nullable = false, name="email")
     private String email;
 
-    @Column(nullable = false, name = "numero_tarjeta")
+    @Column(nullable = false, name="numero_tarjeta")
     private String numeroTarjeta;
 
-    @Column(nullable = false, name = "titular_tarjeta")
+    @Column(nullable = false, name="titular_tarjeta")
     private String titularTarjeta;
 
-    @Column(nullable = false, name = "fecha_expiracion")
+    @Column(nullable = false, name="fecha_expiracion")
     private Date fechaExpiracion;
 
-    @Column(nullable = false, name = "created_at")
+    @Column(nullable = false, name="created_at")
     private Date createdAt;
 
-    @Column(nullable = false, name = "updated_at")
+    @Column(nullable = false, name="updated_at")
     private Date updatedAt;
-
-    /**
-     * Generamos las relaciones con las otras tablas y clases
-     */
-
-    @ManyToOne
-    @JoinColumn(nullable = false, name = "id_cliente")
-    @JsonProperty(access = Access.WRITE_ONLY)
-    private Cliente cliente;
 
     public Integer getId() {
         return id;
@@ -53,6 +49,14 @@ public class DetalleCliente {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     public String getDireccion() {
@@ -119,11 +123,8 @@ public class DetalleCliente {
         this.updatedAt = updatedAt;
     }
 
-    public Cliente getCliente() {
+    public Cliente getClienteId() {
         return cliente;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
 }
