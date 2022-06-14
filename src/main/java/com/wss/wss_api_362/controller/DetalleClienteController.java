@@ -20,9 +20,9 @@ public class DetalleClienteController {
     }
 
     // Leer
-    @RequestMapping("/{id}")
+    @GetMapping("/{id}")
     public DetalleCliente getDetalleCliente(@PathVariable Integer id) {
-        return (DetalleCliente) detalleClienteService.getDetalleCliente(id);
+        return detalleClienteService.getDetalleCliente(id);
     }
 
     @GetMapping("/DetalleClientes")

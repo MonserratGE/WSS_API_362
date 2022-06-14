@@ -7,7 +7,7 @@ import java.util.Map;
 
 public interface DetalleClienteService {
 
-    DetalleClienteService getDetalleCliente(Integer id);
+    DetalleCliente getDetalleCliente(Integer id);
     List<Map<String, Object>> getDetalleClientes();
 
     //Almacena un nuevo detalle de cliente

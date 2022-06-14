@@ -3,6 +3,7 @@ package com.wss.wss_api_362.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.Date;
 
 @Entity
@@ -15,7 +16,7 @@ public class DetalleCliente {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(nullable = false, name="cliente_id")
+    @JoinColumn(nullable = false, name="id_cliente")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Cliente cliente;
 
@@ -35,13 +36,13 @@ public class DetalleCliente {
     private String titularTarjeta;
 
     @Column(nullable = false, name="fecha_expiracion")
-    private Date fechaExpiracion;
+    private Timestamp fechaExpiracion;
 
     @Column(nullable = false, name="created_at")
-    private Date createdAt;
+    private Timestamp createdAt;
 
     @Column(nullable = false, name="updated_at")
-    private Date updatedAt;
+    private Timestamp updatedAt;
 
     public Integer getId() {
         return id;
@@ -103,7 +104,7 @@ public class DetalleCliente {
         return fechaExpiracion;
     }
 
-    public void setFechaExpiracion(Date fechaExpiracion) {
+    public void setFechaExpiracion(Timestamp fechaExpiracion) {
         this.fechaExpiracion = fechaExpiracion;
     }
 
@@ -111,7 +112,7 @@ public class DetalleCliente {
         return createdAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
+    public void setCreatedAt(Timestamp createdAt) {
         this.createdAt = createdAt;
     }
 
@@ -119,12 +120,9 @@ public class DetalleCliente {
         return updatedAt;
     }
 
-    public void setUpdatedAt(Date updatedAt) {
+    public void setUpdatedAt(Timestamp updatedAt) {
         this.updatedAt = updatedAt;
     }
 
-    public Cliente getClienteId() {
-        return cliente;
-    }
 
 }
