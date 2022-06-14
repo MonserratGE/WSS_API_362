@@ -3,6 +3,7 @@ package com.wss.wss_api_362.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 
@@ -13,7 +14,7 @@ public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, name="id_cliente")
-    private Integer id;
+    private Integer idCliente;
 
     @Column(nullable = false, name="nombre")
     private String nombre;
@@ -25,10 +26,10 @@ public class Cliente {
     private String contrasena;
 
     @Column(nullable = false, name="created_at")
-    private Date createdAt;
+    private Timestamp createdAt;
 
     @Column(nullable = false, name="updated_at")
-    private Date updatedAt;
+    private Timestamp updatedAt;
 
     @OneToMany(mappedBy = "cliente")
     private List<DetalleCliente> detalleClientes;
@@ -40,11 +41,11 @@ public class Cliente {
      */
 
     public Integer getId() {
-        return id;
+        return idCliente;
     }
 
     public void setId(Integer id) {
-        this.id = id;
+        this.idCliente = id;
     }
 
     public String getNombre() {
@@ -75,7 +76,7 @@ public class Cliente {
         return createdAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
+    public void setCreatedAt(Timestamp createdAt) {
         this.createdAt = createdAt;
     }
 
@@ -83,7 +84,7 @@ public class Cliente {
         return updatedAt;
     }
 
-    public void setUpdatedAt(Date updatedAt) {
+    public void setUpdatedAt(Timestamp updatedAt) {
         this.updatedAt = updatedAt;
     }
 
@@ -94,6 +95,5 @@ public class Cliente {
     public void setDetalleClientes(List<DetalleCliente> detalleClientes) {
         this.detalleClientes = detalleClientes;
     }
-
 
 }

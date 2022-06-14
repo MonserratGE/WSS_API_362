@@ -19,9 +19,9 @@ public class DetalleServiceImp implements DetalleClienteService {
     }
 
     @Override
-    public DetalleClienteService getDetalleCliente(Integer id) {
+    public DetalleCliente getDetalleCliente(Integer id) {
         Optional<DetalleCliente> detalleCliente = detalleClienteRepository.findById(id);
-        return (DetalleClienteService) detalleCliente.orElse(null);
+        return detalleCliente.orElse(null);
     }
 
     @Override
