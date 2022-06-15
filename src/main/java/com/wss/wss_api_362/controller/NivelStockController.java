@@ -1,0 +1,14 @@
+package com.wss.wss_api_362.controller;
+
+import com.wss.wss_api_362.service.NivelStockService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("api/nivelstock")
+
+public class NivelStockController {
+
+}
