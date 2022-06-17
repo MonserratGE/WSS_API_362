@@ -20,7 +20,7 @@ import com.wss.wss_api_362.service.CompraService;
         RequestMethod.PUT })
 
 @RestController
-@RequestMapping("/api/compra")
+@RequestMapping("api/compra")
 public class CompraController {
 
 	CompraService compraService;

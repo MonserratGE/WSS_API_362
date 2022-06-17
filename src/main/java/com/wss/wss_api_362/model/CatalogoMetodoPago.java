@@ -22,7 +22,7 @@ public class CatalogoMetodoPago {
 	private String NombreMetodoPago;
 	
 	@Column(nullable=false, name="codigo_metodo_pago")
-	private Integer CodigoMetodoPago;
+	private String CodigoMetodoPago;
 	
 	@Column(nullable = false, name="created_at")
     private Date createdAt;
@@ -49,11 +49,11 @@ public class CatalogoMetodoPago {
 		NombreMetodoPago = nombreMetodoPago;
 	}
 
-	public Integer getCodigoMetodoPago() {
+	public String getCodigoMetodoPago() {
 		return CodigoMetodoPago;
 	}
 
-	public void setCodigoMetodoPago(Integer codigoMetodoPago) {
+	public void setCodigoMetodoPago(String codigoMetodoPago) {
 		CodigoMetodoPago = codigoMetodoPago;
 	}
 

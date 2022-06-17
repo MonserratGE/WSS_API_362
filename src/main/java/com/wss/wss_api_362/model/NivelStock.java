@@ -1,12 +1,9 @@
 package com.wss.wss_api_362.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "nivel_stock")
@@ -20,7 +17,7 @@ public class NivelStock {
 	@OneToOne
 	@JoinColumn(nullable = false, name="id_producto")
 	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private Producto idProducto;
+    private Producto producto;
 
     @Column(nullable = false, name="stock_security")
     private Integer stocksecurity;
@@ -34,7 +31,6 @@ public class NivelStock {
     @Column(nullable = false, name="updated_at")
     private Timestamp updatedat;
 
-
 	public Integer getIdnivelstock() {
 		return idnivelstock;
 	}
@@ -43,12 +39,12 @@ public class NivelStock {
 		this.idnivelstock = idnivelstock;
 	}
 
-	public Producto getIdproducto() {
-		return idProducto;
+	public Producto getProducto() {
+		return producto;
 	}
 
-	public void setIdproducto(Producto idproducto) {
-		this.idProducto = idproducto;
+	public void setProducto(Producto producto) {
+		this.producto = producto;
 	}
 
 	public Integer getStocksecurity() {
@@ -83,7 +79,7 @@ public class NivelStock {
 		this.updatedat = updatedat;
 	}
 
-/*	public List<productos> getProductos() {
+	/*	public List<productos> getProductos() {
 		return productos;
 	}
 

@@ -35,13 +35,6 @@ public class Compra {
 	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	private CatalogoMetodoPago metodoPago;
 
-	@Column(nullable = false, name = "unidades")
-	private Integer unidades;
-
-	@Column(nullable = false, name = "precio")
-	private Integer precio;
-
-
 	@Column(nullable = false, name = "created_at")
 	private Timestamp createdAt;
 
@@ -70,22 +63,6 @@ public class Compra {
 
 	public void setMetodoPago(CatalogoMetodoPago metodoPago) {
 		this.metodoPago = metodoPago;
-	}
-
-	public Integer getUnidades() {
-		return unidades;
-	}
-
-	public void setUnidades(Integer unidades) {
-		this.unidades = unidades;
-	}
-
-	public Integer getPrecio() {
-		return precio;
-	}
-
-	public void setPrecio(Integer precio) {
-		this.precio = precio;
 	}
 
 	public Timestamp getCreatedAt() {
