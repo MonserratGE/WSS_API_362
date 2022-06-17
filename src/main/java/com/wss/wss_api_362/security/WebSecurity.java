@@ -1,4 +1,4 @@
-package com.generation.SpringSecurityJWT.security;
+package com.wss.wss_api_362.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,8 +14,8 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import static com.generation.SpringSecurityJWT.security.Constants.HEADER_AUTHORIZACION_KEY;
-import static com.generation.SpringSecurityJWT.security.Constants.LOGIN_URL;
+import static com.wss.wss_api_362.security.Constants.HEADER_AUTHORIZACION_KEY;
+import static com.wss.wss_api_362.security.Constants.LOGIN_URL;
 
 @Configuration
 @EnableWebSecurity
@@ -47,6 +47,16 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .authorizeRequests().antMatchers(HttpMethod.POST, LOGIN_URL).permitAll()
                 .antMatchers(HttpMethod.POST, "/api/usuario").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/cohorte/all").permitAll() //Modificar a lo que necesite
+                .antMatchers(HttpMethod.GET, "/").permitAll()
+                .antMatchers(HttpMethod.GET, "/index.html").permitAll()
+                .antMatchers(HttpMethod.GET, "/login-registro.html").permitAll()
+                .antMatchers(HttpMethod.POST, "/login-registro.html").permitAll()
+                //.antMatchers(HttpMethod.GET, "/signin.html").permitAll()
+                //.antMatchers(HttpMethod.GET, "/admin.html").permitAll()
+                .antMatchers(HttpMethod.GET, "/assets/js/*").permitAll()
+                .antMatchers(HttpMethod.GET, "/assets/css/*").permitAll()
+                .antMatchers(HttpMethod.GET, "/assets/img/*").permitAll()
                 .anyRequest().authenticated().and()
                 .addFilter(new JWTAuthenticationFilter(authenticationManager()))
                 .addFilter(new JWTAuthorizationFilter(authenticationManager()));

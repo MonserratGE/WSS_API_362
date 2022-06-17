@@ -1,4 +1,4 @@
-package com.generation.SpringSecurityJWT.security;
+package com.wss.wss_api_362.security;
 
 public class Constants {
     // Spring Security

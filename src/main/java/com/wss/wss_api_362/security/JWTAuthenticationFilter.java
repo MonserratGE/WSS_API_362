@@ -1,7 +1,8 @@
-package com.generation.SpringSecurityJWT.security;
+package com.wss.wss_api_362.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.generation.SpringSecurityJWT.model.Usuario;
+import com.wss.wss_api_362.model.Cliente;
+
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -18,7 +19,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 
-import static com.generation.SpringSecurityJWT.security.Constants.*;
+import static com.wss.wss_api_362.security.Constants.*;
 
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
     private AuthenticationManager authenticationManager;
@@ -31,10 +32,10 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response)
             throws AuthenticationException {
         try {
-            Usuario credentials = new ObjectMapper().readValue(request.getInputStream(), Usuario.class);
+            Cliente credentials = new ObjectMapper().readValue(request.getInputStream(), Cliente.class);
 
             return authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
-                    credentials.getCorreo(), credentials.getPassword(), new ArrayList<>()));
+                    credentials.getEmail(), credentials.getContrasena(), new ArrayList<>()));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
