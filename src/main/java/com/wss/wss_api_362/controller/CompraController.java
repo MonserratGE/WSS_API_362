@@ -45,16 +45,19 @@ public class CompraController {
 	public Compra saveCompra(@RequestBody Integer compra) {
 		return compraService.saveCompra(compra);
 	}
-	
-	// Borrar
-	@DeleteMapping("delete/{id}")
-	public void deleteCompra(@PathVariable Integer id) {
-		compraService.deleteCompra(id);
-	}
-	
-	// Actualizar
-	@PutMapping
-	public Compra updateCompra(@RequestBody Integer compra) {
-		return compraService.updateCompra(compra);
-	}
+
+	/**
+	 * // Borrar
+	 *        @DeleteMapping("delete/{id}")
+	 *    public void deleteCompra(@PathVariable Integer id) {
+	 * 		compraService.deleteCompra(id);
+	 *    }
+	 *
+	 * 	// Actualizar
+	 *    @PutMapping
+	 *    public Compra updateCompra(@RequestBody Integer compra) {
+	 * 		return compraService.updateCompra(compra);
+	 *    }
+	 *
+	 */
 }

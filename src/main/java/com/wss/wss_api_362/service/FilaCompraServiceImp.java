@@ -1,6 +1,7 @@
 package com.wss.wss_api_362.service;
 
 import com.wss.wss_api_362.model.FilaCompra;
+import com.wss.wss_api_362.model.Producto;
 import com.wss.wss_api_362.repository.FilaCompraRepository;
 
 import java.util.List;
@@ -28,6 +29,11 @@ public class FilaCompraServiceImp implements FilaCompraService {
 
     @Override
     public FilaCompra saveFilaCompra(FilaCompra filaCompra) {
+        return null;
+    }
+
+    @Override
+    public FilaCompra updateFilaCompra(FilaCompra filaCompra) {
         return null;
     }
 }

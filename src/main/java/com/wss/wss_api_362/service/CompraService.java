@@ -10,11 +10,12 @@ public interface CompraService {
 	
 	List<Compra> getCompras();
 	Compra saveCompra(Integer compra);
-	
-	Boolean deleteCompra(Integer id);
-	
-	Compra updateCompra(Integer compra);
-	
 
-
+/**
+ *
+ * 	Boolean deleteCompra(Integer id);
+ *
+ * 	Compra updateCompra(Integer compra);
+ *
+ */
 }

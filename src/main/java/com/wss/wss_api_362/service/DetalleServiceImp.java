@@ -31,7 +31,7 @@ public class DetalleServiceImp implements DetalleClienteService {
 
     @Override
     public DetalleCliente saveDetalleCliente(DetalleCliente detalleCliente) {
-        return null;
+        return detalleClienteRepository.save(detalleCliente);
     }
 
     @Override

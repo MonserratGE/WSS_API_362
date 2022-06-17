@@ -8,9 +8,10 @@ public interface ClienteService {
 
     Cliente getCliente(Integer id);
 
-    List <Cliente> getClientes();
 
     Cliente save(Cliente cliente);
+
+    Cliente update(Cliente cliente);
 
 
 }
