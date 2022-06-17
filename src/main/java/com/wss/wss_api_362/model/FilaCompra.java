@@ -12,31 +12,37 @@ public class FilaCompra {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false, name="id_fila_compra")
+    @Column(nullable = false, name = "id_fila_compra")
     private Integer idFilaCompra;
 
+    @ManyToOne
+    @JoinColumn(nullable = false, name = "id_compra")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private Compra compra;
+
     @OneToOne
-    @JoinColumn(nullable = false, name="id_producto")
+    @JoinColumn(nullable = false, name = "id_producto")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Producto producto;
 
-    @Column(nullable = false, name="num_compra")
+    @Column(nullable = false, name = "num_compra")
     private Integer numCompra;
 
-    @Column(nullable = false, name="unidades")
+    @Column(nullable = false, name = "unidades")
     private Integer unidades;
 
-    @Column(nullable = false, name="precio")
+    @Column(nullable = false, name = "precio")
     private BigInteger precio;
 
-    @Column(nullable = false, name="mensaje_salida")
+    @Column(nullable = false, name = "mensaje_salida")
     private String mensajeSalida;
 
-    @Column(nullable = false, name="created_at")
+    @Column(nullable = false, name = "created_at")
     private Timestamp createdAt;
 
-    @Column(nullable = false, name="updated_at")
+    @Column(nullable = false, name = "updated_at")
     private Timestamp updatedAt;
+
 
     public Integer getIdFilaCompra() {
         return idFilaCompra;
@@ -100,5 +106,13 @@ public class FilaCompra {
 
     public void setUpdatedAt(Timestamp updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    public Compra getCompra() {
+        return compra;
+    }
+
+    public void setCompra(Compra compra) {
+        this.compra = compra;
     }
 }

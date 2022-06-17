@@ -16,96 +16,91 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
 
 @Entity
 @Table(name = "compra")
 public class Compra {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(nullable = false, name="id_compra")
-	private Integer id_compra;
-	
-	@Column(nullable = false, name="id_fila_compra")
-	private Integer id_fila;
-	
-	@Column(nullable = false, name="id_metodo_pago")
-	private Integer id_metodo;
-	
-	@Column(nullable = false, name="unidades")
+	@Column(nullable = false, name = "id_compra")
+	private Integer idCompra;
+
+	@OneToMany(mappedBy = "compra")
+	private List<FilaCompra> filaCompras;
+
+	@OneToOne
+	@JoinColumn(nullable = false, name = "id_metodo_pago")
+	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+	private CatalogoMetodoPago metodoPago;
+
+	@Column(nullable = false, name = "unidades")
 	private Integer unidades;
-	
-	@Column(nullable = false, name="precio")
+
+	@Column(nullable = false, name = "precio")
 	private Integer precio;
-	
-	
-	@Column(nullable = false, name="created_at")
-    private Timestamp createdAt;
-
-    @Column(nullable = false, name="updated_at")
-    private Timestamp updatedAt;
-
-	
-  //Especificar la union con alumno
-//  	@OneToMany(mappedBy = "compra")
-//  	private List<recibo_compra> id_recibo;
-  	
-  	//Especificar la union con instructor
-//  	@OneToOne(mappedBy = "compra")
-//  	private recibo_compra recibo_compra;
-	
-	//Llave foranea 
-	
-//	@ManyToOne
-//	@JoinColumn(nullable = false, name="id_metodo_pago")
-//	@JsonProperty(access = Access.WRITE_ONLY)
-//	private  catalogo_metodo_pago catalogo_metodo_pago;
-//	@JoinColumn(nullable = false, name="id_fila_compra")
-//	@JsonProperty(access = Access.WRITE_ONLY)
-//	private  fila_compra fila_compra;
 
 
-	public Integer getId_compra() {
-		return id_compra;
+	@Column(nullable = false, name = "created_at")
+	private Timestamp createdAt;
+
+	@Column(nullable = false, name = "updated_at")
+	private Timestamp updatedAt;
+
+	public Integer getIdCompra() {
+		return idCompra;
 	}
 
-
-	public void setId_compra(Integer id_compra) {
-		this.id_compra = id_compra;
+	public void setIdCompra(Integer idCompra) {
+		this.idCompra = idCompra;
 	}
 
-
-	public Integer getId_fila() {
-		return id_fila;
+	public List<FilaCompra> getFilaCompras() {
+		return filaCompras;
 	}
 
-
-	public void setId_fila(Integer id_fila) {
-		this.id_fila = id_fila;
+	public void setFilaCompras(List<FilaCompra> filaCompras) {
+		this.filaCompras = filaCompras;
 	}
 
-
-	public Integer getId_metodo() {
-		return id_metodo;
+	public CatalogoMetodoPago getMetodoPago() {
+		return metodoPago;
 	}
 
-
-	public void setId_metodo(Integer id_metodo) {
-		this.id_metodo = id_metodo;
+	public void setMetodoPago(CatalogoMetodoPago metodoPago) {
+		this.metodoPago = metodoPago;
 	}
-
 
 	public Integer getUnidades() {
 		return unidades;
 	}
 
-
 	public void setUnidades(Integer unidades) {
 		this.unidades = unidades;
 	}
 
+	public Integer getPrecio() {
+		return precio;
+	}
 
-	
+	public void setPrecio(Integer precio) {
+		this.precio = precio;
+	}
+
+	public Timestamp getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(Timestamp createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public Timestamp getUpdatedAt() {
+		return updatedAt;
+	}
+
+	public void setUpdatedAt(Timestamp updatedAt) {
+		this.updatedAt = updatedAt;
+	}
 }

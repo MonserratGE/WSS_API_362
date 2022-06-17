@@ -23,12 +23,12 @@ public class ClienteServiceImp implements ClienteService {
     }
 
     @Override
-    public List<Cliente> getClientes() {
-        return (List<Cliente>) clienteRepository.findAll();
+    public Cliente save(Cliente cliente) {
+        return clienteRepository.save(cliente);
     }
 
     @Override
-    public Cliente save(Cliente cliente) {
-        return clienteRepository.save(cliente);
+    public Cliente update(Cliente cliente) {
+        return null;
     }
 }

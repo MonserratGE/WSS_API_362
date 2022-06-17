@@ -35,27 +35,22 @@ public class CompraServiceImp implements CompraService{
 		return compraRepository.save(compra);
 	}
 
-	@Override
-	public Boolean deleteCompra(Integer id) {
-		try {
-			compraRepository.deleteById(id);
-			return true;
-		}catch(Exception err) {
-			return false;
-		}
-	}
+	/**
+	 *
+	 @Override
+	 public Boolean deleteCompra(Integer id) {
+	 try {
+	 compraRepository.deleteById(id);
+	 return true;
+	 }catch(Exception err) {
+	 return false;
+	 }
+	 }
 
-	@Override
-	public Compra updateCompra(Integer compra) {
-		return compraRepository.save(compra); 
-	}
+	 @Override
+	 public Compra updateCompra(Integer compra) {
+	 return compraRepository.save(compra);
+	 }
 
-
-
-
-
-
-	
-	
-
+	 */
 }

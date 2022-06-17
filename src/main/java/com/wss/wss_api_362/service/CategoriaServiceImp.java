@@ -30,11 +30,11 @@ public class CategoriaServiceImp implements CategoriaService{
 		return categoriaRepository.findAll();
 	}
 
-
 	@Override
 	public Categoria saveCategoria(Categoria categoria) {
 		return categoriaRepository.save(categoria);
 	}
+
 
 	@Override
 	public Boolean deleteCategoria(Integer id_categoria) {
@@ -47,11 +47,8 @@ public class CategoriaServiceImp implements CategoriaService{
 		
 	}
 
-	@Override
-	public Categoria updateCategoria(Categoria categoria) {
-		return categoriaRepository.save(categoria);
-	}
-
-	
-
+	 @Override
+	 public Categoria updateCategoria(Categoria categoria) {
+	 return categoriaRepository.save(categoria);
+	 }
 }

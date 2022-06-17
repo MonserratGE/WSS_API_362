@@ -11,10 +11,9 @@ public interface CategoriaService {
 
 	List<Categoria> getCategorias();
 
+
 	Categoria saveCategoria(Categoria categoria);
-
 	Boolean deleteCategoria(Integer id_categoria);
-
 	Categoria updateCategoria(Categoria categoria);
 
 }

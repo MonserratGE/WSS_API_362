@@ -3,13 +3,14 @@ package com.wss.wss_api_362.controller;
 import com.wss.wss_api_362.model.ReciboPago;
 import com.wss.wss_api_362.service.ReciboPagoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
+import java.util.List;
 
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
 @RestController
+@CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.DELETE, RequestMethod.PUT })
 @RequestMapping("/api/recibo_pago")
 public class ReciboPagoController {
 
@@ -20,12 +21,12 @@ public class ReciboPagoController {
     }
 
     @PostMapping
-    public ReciboPago saveReciboPago(ReciboPago reciboPago) {
-        return reciboPagoService.save(reciboPago);
+    public ReciboPago saveReciboPago(@RequestBody ReciboPago reciboPago) {
+        return reciboPagoService.saveReciboPago(reciboPago);
     }
 
     @GetMapping("/{id}")
-    public ArrayList<ReciboPago> getReciboPago(@PathVariable Integer idCliente) {
-        return (ArrayList<ReciboPago>) reciboPagoService.findByClienteId(idCliente);
+    public List<ReciboPago> obtenerReciboByClienteId(@PathVariable Integer idCliente) {
+        return (List<ReciboPago>) reciboPagoService.obtenerReciboByClienteId(idCliente);
     }
 }

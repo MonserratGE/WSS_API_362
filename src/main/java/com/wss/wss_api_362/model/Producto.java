@@ -1,13 +1,10 @@
 package com.wss.wss_api_362.model;
 
-import java.util.Date;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import java.sql.Timestamp;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name="producto")
@@ -26,15 +23,15 @@ public class Producto {
 	
 	@Column(nullable=false, name="descripcion")
 	private String descripcion; 
-	
-	@Column(nullable=false, name="id_categoria")
-	private Integer idCategoria;
+	@ManyToOne
+	@JoinColumn(nullable=false, name="id_categoria")
+	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+	private Categoria idCategoria;
 	
 	@Column(nullable=false, name="precio")
 	private Integer precio;
-	
-	@Column(nullable=false, name="stock_units")
-	private Integer stock;
+	@OneToOne(mappedBy = "idProducto")
+	private NivelStock nivelStock;
 	
 	@Column(nullable=false, name="funcionalidad")
 	private String funcionalidad;
@@ -43,7 +40,7 @@ public class Producto {
 	private String cuidados;
 	
 	@Column(nullable=false, name="medidas")
-	private Integer medidas;
+	private String medidas;
 	
 	@Column(nullable=false, name="imagen_frontal")
 	private String imgFront;
@@ -55,16 +52,11 @@ public class Producto {
 	private String imgExt;
 	
 	@Column(nullable = false, name="created_at")
-    private Date createdAt;
+    private Timestamp createdAt;
 
 	@Column(nullable = false, name="updated_at")
-    private Date updatedAt;
-	
-	
+    private Timestamp updatedAt;
 
-	
-//	SETTERS AND GETTERS 
-	
 	public Integer getIdProducto() {
 		return idProducto;
 	}
@@ -97,11 +89,11 @@ public class Producto {
 		this.descripcion = descripcion;
 	}
 
-	public Integer getIdCategoria() {
+	public Categoria getIdCategoria() {
 		return idCategoria;
 	}
 
-	public void setIdCategoria(Integer idCategoria) {
+	public void setIdCategoria(Categoria idCategoria) {
 		this.idCategoria = idCategoria;
 	}
 
@@ -113,28 +105,12 @@ public class Producto {
 		this.precio = precio;
 	}
 
-	public Integer getStock() {
-		return stock;
+	public NivelStock getNivelStock() {
+		return nivelStock;
 	}
 
-	public void setStock(Integer stock) {
-		this.stock = stock;
-	}
-
-	public Date getCreatedAt() {
-		return createdAt;
-	}
-
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
-	}
-
-	public Date getUpdatedAt() {
-		return updatedAt;
-	}
-
-	public void setUpdatedAt(Date updatedAt) {
-		this.updatedAt = updatedAt;
+	public void setNivelStock(NivelStock nivelStock) {
+		this.nivelStock = nivelStock;
 	}
 
 	public String getFuncionalidad() {
@@ -153,11 +129,11 @@ public class Producto {
 		this.cuidados = cuidados;
 	}
 
-	public Integer getMedidas() {
+	public String getMedidas() {
 		return medidas;
 	}
 
-	public void setMedidas(Integer medidas) {
+	public void setMedidas(String medidas) {
 		this.medidas = medidas;
 	}
 
@@ -184,5 +160,20 @@ public class Producto {
 	public void setImgExt(String imgExt) {
 		this.imgExt = imgExt;
 	}
-	
+
+	public Timestamp getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(Timestamp createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public Timestamp getUpdatedAt() {
+		return updatedAt;
+	}
+
+	public void setUpdatedAt(Timestamp updatedAt) {
+		this.updatedAt = updatedAt;
+	}
 }

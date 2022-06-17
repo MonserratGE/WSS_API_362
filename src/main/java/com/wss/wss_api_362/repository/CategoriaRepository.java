@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.wss.wss_api_362.model.Categoria;
 
 
-	@Repository
-	public interface CategoriaRepository extends JpaRepository<Categoria,Integer>{
+@Repository
+public interface CategoriaRepository extends JpaRepository<Categoria,Integer>{
 
 }

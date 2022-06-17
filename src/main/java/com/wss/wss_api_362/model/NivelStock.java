@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "nivelstock")
+@Table(name = "nivel_stock")
 public class NivelStock {
 
 	@Id
@@ -17,8 +17,10 @@ public class NivelStock {
     @Column(nullable = false, name="id_nivelstock")
     private Integer idnivelstock;
 
-    @Column(nullable = false, name="id_producto")
-    private Integer idproducto;
+	@OneToOne
+	@JoinColumn(nullable = false, name="id_producto")
+	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private Producto idProducto;
 
     @Column(nullable = false, name="stock_security")
     private Integer stocksecurity;
@@ -32,10 +34,6 @@ public class NivelStock {
     @Column(nullable = false, name="updated_at")
     private Timestamp updatedat;
 
-    @ManyToOne
-	@JoinColumn(nullable = false, name="id_nivelstock")
-	@JsonProperty(access = Access.WRITE_ONLY)
-	//private Producto producto;
 
 	public Integer getIdnivelstock() {
 		return idnivelstock;
@@ -45,12 +43,12 @@ public class NivelStock {
 		this.idnivelstock = idnivelstock;
 	}
 
-	public Integer getIdproducto() {
-		return idproducto;
+	public Producto getIdproducto() {
+		return idProducto;
 	}
 
-	public void setIdproducto(Integer idproducto) {
-		this.idproducto = idproducto;
+	public void setIdproducto(Producto idproducto) {
+		this.idProducto = idproducto;
 	}
 
 	public Integer getStocksecurity() {

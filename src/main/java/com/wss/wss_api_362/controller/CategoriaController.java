@@ -19,7 +19,7 @@ import com.wss.wss_api_362.service.CategoriaService;
 @RequestMapping("api/categoria")
 public class CategoriaController {
 	
-	CategoriaService categoriaService;
+	private final CategoriaService categoriaService;
 	
 	public CategoriaController(@Autowired CategoriaService categoriaService) {
 		this.categoriaService = categoriaService;
@@ -31,11 +31,11 @@ public class CategoriaController {
 	}
 
 	@GetMapping("/all")
-	public List<Categoria> getProductos(){
-		return categoriaService.getCategorias();
+	public List<Categoria> getCategorias(){
+		return (List<Categoria>) categoriaService.getCategorias();
 	}
-	
-	
+
+	/*
 	// ************************* Escribir ************************* 
 	@PostMapping
 	public Categoria saveCategoria(@RequestBody Categoria categoria) {
@@ -54,4 +54,5 @@ public class CategoriaController {
 		return categoriaService.updateCategoria(categoria);
 	}
 
+	*/
 }
