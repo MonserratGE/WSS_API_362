@@ -30,7 +30,7 @@ public class Producto {
 	
 	@Column(nullable=false, name="precio")
 	private Integer precio;
-	@OneToOne(mappedBy = "idProducto")
+	@OneToOne(mappedBy = "producto")
 	private NivelStock nivelStock;
 	
 	@Column(nullable=false, name="funcionalidad")

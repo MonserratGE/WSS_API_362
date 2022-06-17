@@ -31,6 +31,9 @@ public class Cliente {
     @Column(nullable = false, name="updated_at")
     private Timestamp updatedAt;
 
+    @Column(nullable = false, name="email")
+    private String email;
+
     @OneToMany(mappedBy = "cliente")
     private List<DetalleCliente> detalleClientes;
 
@@ -40,12 +43,12 @@ public class Cliente {
      * private List<ReciboPago> reciboPagos;
      */
 
-    public Integer getId() {
+    public Integer getIdCliente() {
         return idCliente;
     }
 
-    public void setId(Integer id) {
-        this.idCliente = id;
+    public void setIdCliente(Integer idCliente) {
+        this.idCliente = idCliente;
     }
 
     public String getNombre() {
@@ -72,7 +75,7 @@ public class Cliente {
         this.contrasena = contrasena;
     }
 
-    public Date getCreatedAt() {
+    public Timestamp getCreatedAt() {
         return createdAt;
     }
 
@@ -80,12 +83,20 @@ public class Cliente {
         this.createdAt = createdAt;
     }
 
-    public Date getUpdatedAt() {
+    public Timestamp getUpdatedAt() {
         return updatedAt;
     }
 
     public void setUpdatedAt(Timestamp updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public List<DetalleCliente> getDetalleClientes() {
@@ -95,5 +106,4 @@ public class Cliente {
     public void setDetalleClientes(List<DetalleCliente> detalleClientes) {
         this.detalleClientes = detalleClientes;
     }
-
 }

@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface FilaCompraRepository extends JpaRepository<Producto, Integer> {
+public interface FilaCompraRepository extends JpaRepository<FilaCompra, Integer> {
 
     //Producto findProductoById(Integer id);
 }

@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface FilaCompraService {
 
-    Producto getFilaCompra(Integer id);
+    FilaCompra getFilaCompra(Integer id);
 
-    List<Producto> getFilaCompras();
+    List<FilaCompra> getFilaCompras();
 
     FilaCompra saveFilaCompra(FilaCompra filaCompra);
 
